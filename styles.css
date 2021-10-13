@@ -162,6 +162,18 @@ font-size: .75rem;
   padding: .35rem;
   transition: box-shadow .3s ease;
 }
+.field input[type=number]::-webkit-input-placeholder{
+  opacity: .5;
+}
+.field input[type=number]::-moz-placeholder{
+  opacity: .5;
+}
+.field input[type=number]:-ms-input-placeholder{
+  opacity: .5;
+}
+.field input[type=number]::-ms-input-placeholder{
+  opacity: .5;
+}
 .field input[type=number]::placeholder{
   opacity: .5;
 }
@@ -266,12 +278,10 @@ input[type=number] {
 .btn-info:hover{
   transform: scale(1.025);
 }
-.btn-info a{
-  text-decoration: none;
-}
+
 .show-btn {
   padding: .25rem;
-  height: fit-content;
+  height: auto;
   opacity:1;
 }
 
@@ -391,7 +401,13 @@ input[type=number] {
   color: rgba(209, 128, 5, .5);
 } 
 .icon-top{
-  animation: pulse 3s ease-in-out infinite;
+  -webkit-animation: pulse 3s ease-in-out infinite;
+          animation: pulse 3s ease-in-out infinite;
+}
+@-webkit-keyframes pulse {
+  0% {transform: scale(1)}
+  50% {transform: scale(1.1)}
+  100% {transform: scale(1)}
 }
 @keyframes pulse {
   0% {transform: scale(1)}
