@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMC - calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- calculator section -->
+  <section class="section-center" id="calculator-section">
+
+    <!-- CALCULATOR -->
+    <article class="calculator">
+      <h1 class="main-title">Calculadora de IMC</h1>
+
+      <!-- age btns -->
+      <div class="btn-container">
+        <button class="btn-faixa-etaria" id="btn-crianca">Criança</button>
+        <button class="btn-faixa-etaria selected-btn" id="btn-adulto">Adulto</button>
+      </div>
+      <!-- Form  -->
+      <form class="form-container">
+
+        <!-- input  -->
+        <div class="idade field">
+          <label for="idade" class="title">Idade</label>
+          <div class="input-container">
+            <input class="input-imc-number" type="number" id="idade" title="idade" placeholder="ex: 25">
+            <span class="input-measure">anos</span>
+          </div>
+          <p class="alert-text">a</p>
+        </div>
+        <!-- end of input  -->
+
+        <!-- input  -->
+        <div class="altura field">
+          <label for="altura" class="title">Altura</label>
+          <div class="input-container">
+            <input class="input-imc-number" type="number" id="altura" title="altura" placeholder="ex: 170">
+            <span class="input-measure">cm</span>
+          </div>
+          <p class="alert-text">a</p>
+        </div>
+        <!-- end of input  -->
+
+        <!-- input  -->
+        <div class="peso field">
+          <label for="peso" class="title">Peso</label>
+          <div class="input-container">
+            <input class="input-imc-number" type="number" id="peso" title="peso" placeholder="ex: 70,5" step="0.01">
+            <span class="input-measure">kg</span>
+          </div>
+          <p class="alert-text">a</p>
+        </div>
+        <!-- end of input  -->
+
+        <!-- result  -->
+        <div class="imc-result field">
+          <label for="imc" class="title">IMC</label>
+          <div class="input-container">
+            <p id="imc">
+              <!--result js added-->
+            </p>
+            <span class="input-measure">indice</span>
+          </div>
+        </div>
+        <!-- end of result  -->
+
+        <!-- buttons -->
+        <button class="btn-submit" type="submit" id="btn-submit">Calcular</button>
+        <button class="btn-info" type="text">Saiba mais</button>
+      </form>
+      <!-- end of Form -->
+
+    </article>
+    <!-- end of CALCULATOR -->
+  </section>
+  <!-- end of calculator section -->
+
+  <!-- IMC board info section-->
+  <section class="section-center" id="info-board">
+
+    <!-- IMC board -->
+    <article class="imc-board">
+      <!-- IMC board header -->
+      <div class="title-board">
+        <h2>Resultado</h2>
+        <p>Seu IMC é <span id="imc-board-result">
+            <!--js-->
+          </span></p>
+      </div>
+      <!-- end of IMC board header -->
+
+      <!-- board info -->
+      <div class="info-board">
+        <!-- text info -->
+        <p>De acordo com a OMS, seu IMC está <span data-text="imc-board-text">
+            <!--js-->
+          </span> do recomendado para a sua altura.
+          Para <span data-text="imc-board-text">
+            <!--js-->
+          </span> um valor
+          de IMC normal, seu peso
+          deve estar entre <span id="imc-board-score">
+            <!--js-->
+          </span> </p>
+        <p><span>Nota</span>: o cálculo de IMC não leva em consideração a composição corporal. Por esse motivo, pessoas
+          com muita massa
+          muscular, como é o caso de alguns atletas, podem apresentar um IMC acima do normal. O ideal é consultar um
+          nutricionista
+          para fazer uma avaliação mais detalhada.</p>
+        <!-- end od text info -->
+
+        <!-- IMC values table  -->
+        <div class="imc-table">
+          <!-- single row -->
+          <div class="table-row table-header">
+            <p></p>
+            <p>IMC</p>
+            <p>PESO</p>
+          </div>
+          <!-- single row -->
+          <div class="table-row" data-id="1">
+            <p>Magreza</p>
+            <p>&lt; 18.5</p>
+            <p></p>
+          </div>
+          <!-- single row -->
+          <div class="table-row" data-id="3">
+            <p>Normal</p>
+            <p>18.5 a 24.9</p>
+            <p></p>
+          </div>
+          <!-- single row -->
+          <div class="table-row" data-id="4">
+            <p>Sobrepeso</p>
+            <p>24.9 a 30</p>
+            <p></p>
+          </div>
+
+          <!-- single row -->
+          <div class="table-row" data-id="6">
+            <p>Obesidade</p>
+            <p>&gt; 30</p>
+            <p></p>
+          </div>
+        </div>
+        <!-- end of values table -->
+      </div>
+      <!-- end of board info -->
+      <div class="back-top">
+        <i class="far fa-arrow-alt-circle-up icon-top"></i>
+      </div>
+    </article>
+    <!-- end of IMC board -->
+  </section>
+  <!-- end of IMC board info section-->
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
