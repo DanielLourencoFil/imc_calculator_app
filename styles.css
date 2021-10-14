@@ -52,6 +52,7 @@ p {
 }
 
 button {
+  font-family: var(--font-primary);
   font-size: 1rem;
   border: none;
   background-color: none;
@@ -68,25 +69,23 @@ button {
   max-width: 450px;
   min-height: 100vh;
   margin: 0 auto;
-  margin-bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* z-index: -100; */
 }
 
 /* =====  CALCULATOR ===== */
 
 .calculator{
   background: var(--color-light-500);
-  width: 90vw;
-  max-width: 310px;
+  width: 290px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  padding: 2rem 2.25rem;
   border-radius: 5px;
   box-shadow:var(--box-shadow-1);
 }
@@ -96,27 +95,27 @@ button {
 }
 
 /* FORM */
-
 .form-container{
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
 /* buttons age range */
-
 .btn-container{
+  width: 100%;
   display: flex;
-  margin: 0 auto;
-
+  
 }
+
 .btn-faixa-etaria{
-  font-size: 1rem;
+  width: 100%;
+  font-size: .875rem;
   background: white;
   border: 2px solid transparent;
-  padding: .25rem 1.75rem;
-  transition: all 1s linear;
+  padding: .25rem 1.45rem;
+  transition: var(--transition);
+  /* transition: all 1s linear; */
 }
 
 #btn-crianca{
@@ -130,10 +129,10 @@ button {
 }
 
 /* form input fields */
-
+.form-container{
+  width: 100%;
+}
 .input-container {
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -143,34 +142,22 @@ button {
 .field label{
   display: inline-block;
   color: var(--color-dark-500);
-  font-size: 1rem;
+  font-size: .85rem;
   margin-bottom: .35rem;
 }
-
 .field span{
     color: var(--color-dark-500);
-font-size: .875rem;
-margin-left: .25rem;
+font-size: .75rem;
 }
 .field input[type=number] {
+  width: 100%;
   color: var(--color-dark-500);
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-family: var(--font-primary);
+  font-size: .9rem;
   padding: .35rem;
   transition: box-shadow .3s ease;
-}
-.field input[type=number]::-webkit-input-placeholder{
-  opacity: .5;
-}
-.field input[type=number]::-moz-placeholder{
-  opacity: .5;
-}
-.field input[type=number]:-ms-input-placeholder{
-  opacity: .5;
-}
-.field input[type=number]::-ms-input-placeholder{
-  opacity: .5;
 }
 .field input[type=number]::placeholder{
   opacity: .5;
@@ -197,10 +184,9 @@ input[type=number] {
 
 /* form alert (under input field)- wrong input value  */
 .alert-text {
-  font-size: .675rem;
+  font-size: .55rem;
   margin: 0;
   margin-top: .2rem;
-  margin-bottom: .2rem;
   padding: 0;
   color: var(--color-alert-danger);
   opacity: 0;
@@ -242,7 +228,7 @@ input[type=number] {
 
 .result-text{
   display: inline-block;
-  font-size: .825rem !important;
+  font-size: .725rem !important;
 }
 
 /* SUBMIT button */
@@ -254,7 +240,6 @@ input[type=number] {
   font-size: 1rem;
   letter-spacing: var(--letter-spacing);
   color:#fff;
-  margin-bottom: .5rem;
  transition: all .3s linear;
 }
 
@@ -268,7 +253,8 @@ input[type=number] {
   height: 0;
   max-height: 10rem;
   border-radius: 5px;
-  font-size: .875rem;
+  margin-top: -1.15rem;
+  font-size: .75rem;
   letter-spacing: var(--letter-spacing);
   opacity: 0;
   transition: all .3s linear;
@@ -277,7 +263,9 @@ input[type=number] {
 .btn-info:hover{
   transform: scale(1.025);
 }
-
+.btn-info a{
+  text-decoration: none;
+}
 .show-btn {
   padding: .25rem;
   height: auto;
@@ -325,7 +313,7 @@ input[type=number] {
   position: relative;
   height: auto;
   background: var(--color-light-500);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 5px;
 }
 
@@ -340,15 +328,15 @@ input[type=number] {
 
 #imc-board-result {
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: .95rem;
 }
 
 .info-board p{
-  font-size: .875rem;
+  font-size: .785rem;
 }
 
 .info-board > p:nth-child(2){
-  font-size: .75rem;
+  font-size: .675rem;
 }
 
 .info-board p:nth-child(2) span{
@@ -400,16 +388,11 @@ input[type=number] {
   color: rgba(209, 128, 5, .5);
 } 
 .icon-top{
-  -webkit-animation: pulse 3s ease-in-out infinite;
-          animation: pulse 3s ease-in-out infinite;
-}
-@-webkit-keyframes pulse {
-  0% {transform: scale(1)}
-  50% {transform: scale(1.1)}
-  100% {transform: scale(1)}
+  cursor: pointer;
+  animation: pulse 2s ease-in-out infinite;
 }
 @keyframes pulse {
   0% {transform: scale(1)}
-  50% {transform: scale(1.1)}
+  50% {transform: scale(1.15)}
   100% {transform: scale(1)}
 }
