@@ -1,4 +1,5 @@
 function getNumbers(input) {
+
   const numbers = input.map((num) => {
 
     //select text with wrong input
@@ -6,9 +7,12 @@ function getNumbers(input) {
     const alertDisplay = num.parentElement.parentElement;
 
     //prevent submit incomplete form and alert
+    if (num.value == "") {
+      alertText.classList.add('alert-invalid-input')
+    }
     if (alertText.classList.contains('alert-invalid-input')) {
+
       alertText.textContent = 'Por favor, forneça um número válido.';
-      return alertText;
     }
     //sucess input
     alertDisplay.classList.remove('sucess-input');

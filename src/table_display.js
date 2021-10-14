@@ -31,8 +31,18 @@ function tableImcDisplay(table, data) {
     // data display
     data.map((score) => {
       if (row.dataset.id == score.id) {
-        return row.children[1].textContent = `${score.score_min} a ${score.score_max}`,
-          row.children[2].textContent = `${score.min} a ${score.max} Kg`;
+        row.children[1].textContent = `${score.score_min} a ${score.score_max}`;
+        row.children[2].textContent = `${score.min} a ${score.max} Kg`;
+      }
+      if (row.dataset.id == 2) {
+        // console.log(score);
+        row.children[1].textContent = `< ${data[1].score_max}`;
+        row.children[2].textContent = `< ${data[1].max} Kg`;
+      }
+      if (row.dataset.id == 5) {
+        // console.log(score);
+        row.children[1].textContent = `> ${data[4].score_min}`;
+        row.children[2].textContent = `> ${data[4].min} Kg`;
       }
     })
   })

@@ -1,5 +1,5 @@
 
-function displayResult(score, alert, btn, data) {
+function displayResult(score, alert, btn) {
   const alerts = [
     {
       alert1: "0 0 2px 5px rgba(187, 4, 4, 0.5)", // color red

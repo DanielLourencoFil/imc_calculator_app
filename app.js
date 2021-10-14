@@ -88,7 +88,7 @@ calculator.addEventListener('submit', (e) => {
   /* Display score result, 
      and add color alert, 
      display btn info and alert matching color */
-  displayResult(imcScoreResult, resultDisplay, btnInfo, imcData);
+  displayResult(imcScoreResult, resultDisplay, btnInfo);
   //================= end =================//
 
   //===// DISPLAY BOARD:  IMC score and result max-min height //===//
